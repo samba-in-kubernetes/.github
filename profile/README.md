@@ -1,25 +1,25 @@
 ## Hi there 👋
 
-The samba-in-kubernetes organisation is the home of a few software projects around the [Samba](https://samba.org) project.
+The samba-in-kubernetes organization is the home of a few software projects related to the [Samba](https://samba.org) project.
 
-The original purpose was to create samba containers and an operator for running Samba in  [kubernetes](https://kubernetes.io).
+The original purpose was to create Samba Containers and a [Kubernetes](https://kubernetes.io) operator for running Samba within Kubernetes clusters.
 
-The two central projects for this purpose are [samba-container](https://github.com/samba-in-kubernetes/samba-container)
-and [samba-operator](https://github.com/samba-in-kubernetes/samba-operator).
+Two major projects for this purpose are [samba-container](https://github.com/samba-in-kubernetes/samba-container)
+and [samba-operator](https://github.com/samba-in-kubernetes/samba-operator). These projects are intended for direct use by a wide audience.
 
-Additionally, [sambacc](https://github.com/samba-in-kubernetes/sambacc) hosts the samba configuration tool used as the container entry point
-and [smbmetrics](https://github.com/samba-in-kubernetes/smbmetrics) is a software that exports metrics from Samba in prometheus format.
+Additionally, this organization hosts many related projects that help support, build, and test the container and operator projects.
 
-An additional purpose of this organisation is to provide Samba RPM builds (via [samba-build](https://github.com/samba-in-kubernetes/samba-build))
+[sambacc](https://github.com/samba-in-kubernetes/sambacc) hosts a samba configuration tool and server container entry point.
+[smbmetrics](https://github.com/samba-in-kubernetes/smbmetrics) provides a server that exports metrics from Samba in Prometheus format.
+[samba-build](https://github.com/samba-in-kubernetes/samba-build) is used to continuously build Samba RPMs from Samba development branches.
 
-
-Finally, another purpose is to provide test infrastructure and test cases for testing clustered Samba on a distributed filesystem like
-[Gluster](https://gluster.org) or [Ceph](https://ceph.io). The corresponding repositories for Samba Integration Testing (sit) are
+Test infrastructure and test cases for testing clustered Samba on distributed filesystems like
+[Gluster](https://gluster.org) and [Ceph](https://ceph.io) can be found in the Samba Integration Testing (SIT) repositories:
 [sit-environment](https://github.com/samba-in-kubernetes/sit-environment)
-and[sit-test-cases](https://github.com/samba-in-kubernetes/sit-test-cases)
+and [sit-test-cases](https://github.com/samba-in-kubernetes/sit-test-cases)
 
-The nightly RPMs from samba-build are used in the nightly samba-container images hosted on [quay](https://quay.io).
+Container images produced by our projects are hosted in our [quay.io](https://quay.io) image repositories: [samba container images](https://quay.io/samba.org)
 
-Note that  the Samba container images are not specific to kubernetes at all.
-They are for example used by the [Ceph](https://ceph.io) project.
+Note that the images produced by samba-containers and smbmetrics are not specific to Kubernetes at all.
+For example, these images are also used by the [Ceph](https://ceph.io) project. Only the samba-operator image requires Kubernetes.
 
